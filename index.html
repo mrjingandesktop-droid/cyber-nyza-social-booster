@@ -641,6 +641,28 @@
 
         // Initial Load
         renderOrders();
-    </script>
+    </script><?php
+$api_url = "https://example-smm-panel.com/api/v2"; // Provider-ude API URL
+$api_key = "YOUR_API_KEY_HERE";                     // Ningalude API Key
+
+$data = array(
+    'key'      => $api_key,
+    'action'   => 'add',
+    'service'  => 123, // Followers-inte Service ID
+    'link'     => 'https://instagram.com/target_username',
+    'quantity' => 50000 // Quantity (50k)
+);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $api_url);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+echo $response; // Order success/failed status
+?>
 </body>
 </html>
