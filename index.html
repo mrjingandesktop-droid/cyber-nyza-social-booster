@@ -1,512 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Nyza - Free Social Booster Kerala</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  <title>Cyber Nyza Social Booster Kerala</title>
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #1e293b;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
 
-    body {
-      background: #050509;
-      color: white;
-      line-height: 1.6;
-    }
+        .logo span {
+            color: #ef4444;
+        }
 
-    /* NAVBAR */
-    nav {
-      width: 100%;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(5, 5, 9, 0.96);
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #202030;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #00f7ff;
-    }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-    .logo span {
-      color: #ff00d4;
-    }
+        nav a:hover {
+            color: #38bdf8;
+        }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
 
-    nav a:hover {
-      color: #00f7ff;
-    }
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 120px 20px 60px;
-      background:
-        radial-gradient(circle at 20% 30%, #16004d, transparent 35%),
-        radial-gradient(circle at 80% 70%, #39002f, transparent 35%),
-        #050509;
-    }
+        /* Free Service Section */
+        .free-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
 
-    .hero-content {
-      max-width: 900px;
-    }
+        .free-container h2 {
+            margin-bottom: 20px;
+            color: #4ade80;
+        }
 
-    .hero h1 {
-      font-size: clamp(40px, 7vw, 80px);
-      line-height: 1.1;
-      margin-bottom: 25px;
-      background: linear-gradient(90deg, #00f7ff, #ff00d4);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
-    .hero p {
-      color: #c8c8d0;
-      font-size: 20px;
-      margin-bottom: 35px;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 8px;
-      transition: 0.3s;
-    }
+        .form-group select, 
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
 
-    .primary {
-      background: linear-gradient(90deg, #00f7ff, #008cff);
-      color: #000;
-      box-shadow: 0 0 25px #00f7ff55;
-    }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    .secondary {
-      border: 1px solid #ff00d4;
-      color: #ff00d4;
-    }
+        .btn-submit:hover {
+            background: #1d4ed8;
+        }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 25px #00f7ff88;
-    }
+        #statusMessage {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            display: none;
+            font-weight: bold;
+        }
 
-    /* SECTIONS */
-    section {
-      padding: 90px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-      font-size: 40px;
-      color: #00f7ff;
-    }
-
-    .section-title p {
-      color: #999;
-      margin-top: 10px;
-    }
-
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #0c0c14;
-      padding: 30px;
-      border: 1px solid #202030;
-      border-radius: 18px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: #00f7ff;
-      box-shadow: 0 0 25px #00f7ff22;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: #ff00d4;
-    }
-
-    .card p {
-      color: #aaa;
-    }
-
-    /* PRICING */
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .price-card {
-      background: #0c0c14;
-      padding: 35px;
-      text-align: center;
-      border-radius: 20px;
-      border: 1px solid #292940;
-    }
-
-    .price-card.featured {
-      border: 2px solid #00f7ff;
-      box-shadow: 0 0 30px #00f7ff22;
-    }
-
-    .price {
-      font-size: 38px;
-      color: #00f7ff;
-      margin: 20px 0;
-    }
-
-    .price-card ul {
-      list-style: none;
-      color: #bbb;
-      margin-bottom: 25px;
-    }
-
-    .price-card li {
-      margin: 10px 0;
-    }
-
-    /* WHY US */
-    .why {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-
-    .why-box {
-      padding: 30px;
-      background: #0c0c14;
-      border-radius: 15px;
-    }
-
-    .why-box h3 {
-      color: #00f7ff;
-      margin-bottom: 10px;
-    }
-
-    /* CONTACT */
-    .contact {
-      text-align: center;
-      background: linear-gradient(180deg, #050509, #100018);
-    }
-
-    .contact h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      color: #aaa;
-      margin-bottom: 25px;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #030305;
-      color: #777;
-      border-top: 1px solid #202030;
-    }
-
-    /* MOBILE */
-    @media(max-width: 700px) {
-
-      nav {
-        padding: 18px 5%;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      section {
-        padding: 70px 5%;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
-      }
-    }
-  </style>
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #090d16;
+            color: #64748b;
+            margin-top: 60px;
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">
-      CYBER <span>NYZA</span>
-    </div>
-
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-
-      <h1>
-        Cyber Nyza<br>
-        Social Booster Kerala
-      </h1>
-
-      <p>
-        Boost Your Social Media Presence 🚀<br>
-        Grow Faster. Reach More. Stand Out.
-      </p>
-
-      <a href="#services" class="btn primary">
-        Explore Services
-      </a>
-
-      <a href="https://wa.me/916282942681" class="btn secondary" target="_blank">
-        Contact Us
-      </a>
-
-    </div>
-  </section>
-
-
-  <!-- SERVICES -->
-  <section id="services">
-
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <p>Powerful social media solutions for your growth.</p>
-    </div>
-
-    <div class="services">
-
-      <div class="card">
-        <h3>📸 Instagram</h3>
-        <p>
-          Grow your Instagram presence with professional
-          social media promotion solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>📘 Facebook</h3>
-        <p>
-          Improve your Facebook reach and build a stronger
-          online presence.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>▶️ YouTube</h3>
-        <p>
-          Promote your YouTube channel and increase your
-          content visibility.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>🎵 TikTok</h3>
-        <p>
-          Get your content in front of more people and
-          increase your social reach.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRICING -->
-  <section id="pricing">
-
-    <div class="section-title">
-      <h2>Simple Pricing</h2>
-      <p>Choose a package that fits your needs.</p>
-    </div>
-
-    <div class="pricing">
-
-      <div class="price-card">
-
-        <h3>Starter</h3>
-
-        <div class="price">
-          ₹99
-        </div>
-
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">CYBER <span>NYZA</span></div>
         <ul>
-          <li>Social Media Service</li>
-          <li>Fast Processing</li>
-          <li>Basic Support</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#free-service">Free Service</a></li>
+            <li><a href="https://wa.me/916282942681" target="_blank">Contact</a></li>
         </ul>
+    </nav>
 
-        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
-          Order Now
-        </a>
+    <!-- Main Hero Section -->
+    <section class="hero" id="home">
+        <h1>Cyber Nyza Social Booster</h1>
+        <p>100% Free Social Media Growth Solution 🚀</p>
 
-      </div>
+        <!-- Free Order Box -->
+        <div class="free-container" id="free-service">
+            <h2>🎁 Try Free Service</h2>
+            
+            <form id="smmForm">
+                <div class="form-group">
+                    <label for="service">Choose Service:</label>
+                    <select id="service" required>
+                        <option value="Free 50 Instagram Followers">📸 Free Instagram Followers (50)</option>
+                        <option value="Free 100 Instagram Likes">❤️ Free Instagram Likes (100)</option>
+                        <option value="Free 100 YouTube Views">▶️ Free YouTube Views (100)</option>
+                        <option value="Free 100 Facebook Reach">📘 Free Facebook Reach (100)</option>
+                        <option value="Free 100 TikTok Views">🎵 Free TikTok Views (100)</option>
+                    </select>
+                </div>
 
+                <div class="form-group">
+                    <label for="link">Target URL / Profile Link:</label>
+                    <input type="url" id="link" placeholder="https://instagram.com/your_username" required>
+                </div>
 
-      <div class="price-card featured">
+                <button type="submit" id="submitBtn" class="btn-submit">🚀 Get Free Boost Now</button>
+            </form>
 
-        <h3>Popular</h3>
-
-        <div class="price">
-          ₹299
+            <div id="statusMessage"></div>
         </div>
+    </section>
 
-        <ul>
-          <li>Premium Service</li>
-          <li>Fast Processing</li>
-          <li>Priority Support</li>
-        </ul>
+    <!-- Footer -->
+    <footer>
+        © 2026 Cyber Nyza Social Booster Kerala. All Rights Reserved.
+    </footer>
 
-        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
-          Order Now
-        </a>
+    <!-- Instant Auto Order Script -->
+    <script>
+        document.getElementById('smmForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-      </div>
+            const btn = document.getElementById('submitBtn');
+            const statusMsg = document.getElementById('statusMessage');
+            const service = document.getElementById('service').value;
+            const link = document.getElementById('link').value;
 
+            btn.disabled = true;
+            btn.innerText = "Processing Order...";
+            statusMsg.style.display = "block";
+            statusMsg.style.color = "#facc15";
+            statusMsg.innerText = "⏳ Connecting to Server...";
 
-      <div class="price-card">
+            setTimeout(() => {
+                statusMsg.style.color = "#4ade80";
+                statusMsg.innerText = "✅ Order Success! Redirecting to Complete...";
 
-        <h3>Business</h3>
+                // Your WhatsApp Number
+                const phone = "916282942681";
+                const text = `*NEW FREE ORDER RECEIVED!*%0A%0A*Service:* ${service}%0A*Link:* ${link}%0A*Status:* Processing`;
+                
+                // Redirects directly to WhatsApp after click
+                window.location.href = `https://wa.me/${phone}?text=${text}`;
 
-        <div class="price">
-          ₹599
-        </div>
-
-        <ul>
-          <li>Advanced Service</li>
-          <li>Priority Processing</li>
-          <li>Premium Support</li>
-        </ul>
-
-        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
-          Order Now
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHY US -->
-  <section>
-
-    <div class="section-title">
-      <h2>Why Cyber Nyza?</h2>
-      <p>Built for creators, brands and businesses.</p>
-    </div>
-
-    <div class="why">
-
-      <div class="why-box">
-        <h3>⚡ Fast</h3>
-        <p>Quick service processing.</p>
-      </div>
-
-      <div class="why-box">
-        <h3>🔐 Secure</h3>
-        <p>Your information stays protected.</p>
-      </div>
-
-      <div class="why-box">
-        <h3>💎 Affordable</h3>
-        <p>Budget-friendly social media solutions.</p>
-      </div>
-
-      <div class="why-box">
-        <h3>💬 Support</h3>
-        <p>Friendly customer support.</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-
-    <h2>Ready to Grow?</h2>
-
-    <p>
-      Contact Cyber Nyza Social Booster Kerala today.
-    </p>
-
-    <a
-      href="https://wa.me/916282942681"
-      class="btn primary"
-      target="_blank">
-      💬 WhatsApp Us
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    © 2026 Cyber Nyza Social Booster Kerala.
-    All Rights Reserved.
-
-  </footer>
-
+                btn.disabled = false;
+                btn.innerText = "🚀 Get Free Boost Now";
+                document.getElementById('smmForm').reset();
+            }, 1500);
+        });
+    </script>
 </body>
 </html>
