@@ -233,3 +233,414 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Nyza - Free Social Booster Kerala (Auto SMM Panel)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #38bdf8;
+        }
+
+        .logo span {
+            color: #ef4444;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: radial-gradient(circle at top, #1e293b 0%, #0b0f19 70%);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            color: #38bdf8;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* Container Card */
+        .card-container {
+            max-width: 550px;
+            margin: 0 auto 30px;
+            background: #111827;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #1f2937;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.6);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-group select, 
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #374151;
+            background: #1f2937;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group select:focus, 
+        .form-group input:focus {
+            border-color: #38bdf8;
+        }
+
+        .badge-free {
+            background: #059669;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        .btn-submit:disabled {
+            background: #4b5563;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Status Box */
+        #statusMessage {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 10px;
+            display: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Live Orders Log Table */
+        .orders-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .orders-section h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            background: #111827;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        th {
+            background: #1f2937;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .status-processing { background: #854d0e; color: #fef08a; }
+        .status-completed { background: #166534; color: #bbf7d0; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #030712;
+            color: #64748b;
+            margin-top: 60px;
+            font-size: 14px;
+            border-top: 1px solid #111827;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">CYBER <span>NYZA</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#free-service">Free Booster</a></li>
+            <li><a href="#orders">Live Orders</a></li>
+            <li><a href="https://wa.me/916282942681" target="_blank">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Cyber Nyza Social Booster</h1>
+        <p>100% Instant Free Social Media Followers & Views Engine 🚀</p>
+
+        <!-- Main Free Booster Form Card -->
+        <div class="card-container" id="free-service">
+            <div class="card-title">
+                ⚡ Instant Free Order Generator
+            </div>
+            
+            <form id="freeSmmForm">
+                <div class="form-group">
+                    <label for="service">Choose Service <span class="badge-free">FREE ₹0</span></label>
+                    <select id="service" required>
+                        <option value="101|📸 50 Free Instagram Followers">📸 50 Free Instagram Followers [Instant]</option>
+                        <option value="102|❤️ 100 Free Instagram Likes">❤️ 100 Free Instagram Likes [Instant]</option>
+                        <option value="103|▶️ 100 Free YouTube Views">▶️ 100 Free YouTube Views [Daily]</option>
+                        <option value="104|📘 100 Free Facebook Reach">📘 100 Free Facebook Reach [Instant]</option>
+                        <option value="105|🎵 100 Free TikTok Views">🎵 100 Free TikTok Views [Instant]</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="link">Target Username / Profile Link</label>
+                    <input type="text" id="link" placeholder="e.g. https://instagram.com/your_username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity (Pre-Set Free)</label>
+                    <input type="text" id="quantity" value="50 (Max Free)" disabled style="opacity: 0.7; cursor: not-allowed;">
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    🚀 Submit Free Order Now
+                </button>
+            </form>
+
+            <div id="statusMessage"></div>
+        </div>
+    </section>
+
+    <!-- Live Orders Table Section -->
+    <section class="orders-section" id="orders">
+        <h3>📊 Live Generated Orders (Real-time Status)</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Service</th>
+                        <th>Target Link</th>
+                        <th>Charge</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody">
+                    <!-- Dynamic Rows Loaded via JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Cyber Nyza Social Booster Kerala. All Rights Reserved.
+    </footer>
+
+    <!-- All-in-One Engine Script -->
+    <script>
+        // Load existing orders from Browser Storage
+        function getSavedOrders() {
+            const data = localStorage.getItem('cyber_nyza_orders');
+            return data ? JSON.parse(data) : [
+                { id: "849201", service: "📸 50 Free Instagram Followers", link: "instagram.com/demo_user", charge: "₹0.00", status: "Completed" },
+                { id: "732910", service: "❤️ 100 Free Instagram Likes", link: "instagram.com/kerala_reels", charge: "₹0.00", status: "Completed" }
+            ];
+        }
+
+        function renderOrders() {
+            const orders = getSavedOrders();
+            const tbody = document.getElementById('ordersTableBody');
+            tbody.innerHTML = '';
+            orders.forEach(ord => {
+                const statusClass = ord.status === 'Completed' ? 'status-completed' : 'status-processing';
+                tbody.innerHTML += `
+                    <tr>
+                        <td>#${ord.id}</td>
+                        <td>${ord.service}</td>
+                        <td><small>${ord.link}</small></td>
+                        <td><strong style="color: #4ade80;">${ord.charge}</strong></td>
+                        <td><span class="status-badge ${statusClass}">${ord.status}</span></td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Handle Order Submission
+        document.getElementById('freeSmmForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            const statusMsg = document.getElementById('statusMessage');
+            const serviceVal = document.getElementById('service').value.split('|')[1];
+            const linkVal = document.getElementById('link').value.trim();
+
+            if(!linkVal) return;
+
+            btn.disabled = true;
+            btn.innerText = "⏳ Connecting to Server Engine...";
+            statusMsg.style.display = "block";
+            statusMsg.style.background = "#1e293b";
+            statusMsg.style.color = "#facc15";
+            statusMsg.innerText = "⚡ Generating Free API Task Request...";
+
+            setTimeout(() => {
+                const orderId = Math.floor(100000 + Math.random() * 900000);
+                
+                // Save Order locally
+                const orders = getSavedOrders();
+                orders.unshift({
+                    id: orderId,
+                    service: serviceVal,
+                    link: linkVal,
+                    charge: "₹0.00",
+                    status: "Processing"
+                });
+                localStorage.setItem('cyber_nyza_orders', JSON.stringify(orders));
+
+                // Update Table UI
+                renderOrders();
+
+                statusMsg.style.background = "#064e3b";
+                statusMsg.style.color = "#4ade80";
+                statusMsg.innerHTML = `✅ <strong>Order #${orderId} Success!</strong><br>Redirecting to WhatsApp for instant delivery...`;
+
+                // WhatsApp Instant Forwarding
+                const waPhone = "916282942681";
+                const waMessage = `*NEW FREE ORDER!*%0A%0A*Order ID:* #${orderId}%0A*Service:* ${serviceVal}%0A*Link:* ${linkVal}%0A*Price:* ₹0.00 (FREE)`;
+                
+                setTimeout(() => {
+                    window.location.href = `https://wa.me/${waPhone}?text=${waMessage}`;
+                    btn.disabled = false;
+                    btn.innerText = "🚀 Submit Free Order Now";
+                    document.getElementById('freeSmmForm').reset();
+                }, 1800);
+
+            }, 1200);
+        });
+
+        // Initial Load
+        renderOrders();
+    </script>
+</body>
+</html>
