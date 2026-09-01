@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cyber Nyza Social Booster Kerala</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050509;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(5, 5, 9, 0.96);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #202030;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #00f7ff;
+    }
+
+    .logo span {
+      color: #ff00d4;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00f7ff;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background:
+        radial-gradient(circle at 20% 30%, #16004d, transparent 35%),
+        radial-gradient(circle at 80% 70%, #39002f, transparent 35%),
+        #050509;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 80px);
+      line-height: 1.1;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #00f7ff, #ff00d4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #c8c8d0;
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: linear-gradient(90deg, #00f7ff, #008cff);
+      color: #000;
+      box-shadow: 0 0 25px #00f7ff55;
+    }
+
+    .secondary {
+      border: 1px solid #ff00d4;
+      color: #ff00d4;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px #00f7ff88;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      color: #00f7ff;
+    }
+
+    .section-title p {
+      color: #999;
+      margin-top: 10px;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #0c0c14;
+      padding: 30px;
+      border: 1px solid #202030;
+      border-radius: 18px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #00f7ff;
+      box-shadow: 0 0 25px #00f7ff22;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #ff00d4;
+    }
+
+    .card p {
+      color: #aaa;
+    }
+
+    /* PRICING */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .price-card {
+      background: #0c0c14;
+      padding: 35px;
+      text-align: center;
+      border-radius: 20px;
+      border: 1px solid #292940;
+    }
+
+    .price-card.featured {
+      border: 2px solid #00f7ff;
+      box-shadow: 0 0 30px #00f7ff22;
+    }
+
+    .price {
+      font-size: 38px;
+      color: #00f7ff;
+      margin: 20px 0;
+    }
+
+    .price-card ul {
+      list-style: none;
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+
+    .price-card li {
+      margin: 10px 0;
+    }
+
+    /* WHY US */
+    .why {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .why-box {
+      padding: 30px;
+      background: #0c0c14;
+      border-radius: 15px;
+    }
+
+    .why-box h3 {
+      color: #00f7ff;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: linear-gradient(180deg, #050509, #100018);
+    }
+
+    .contact h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #030305;
+      color: #777;
+      border-top: 1px solid #202030;
+    }
+
+    /* MOBILE */
+    @media(max-width: 700px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      CYBER <span>NYZA</span>
+    </div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>
+        Cyber Nyza<br>
+        Social Booster Kerala
+      </h1>
+
+      <p>
+        Boost Your Social Media Presence 🚀<br>
+        Grow Faster. Reach More. Stand Out.
+      </p>
+
+      <a href="#services" class="btn primary">
+        Explore Services
+      </a>
+
+      <a href="https://wa.me/916282942681" class="btn secondary" target="_blank">
+        Contact Us
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Powerful social media solutions for your growth.</p>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>📸 Instagram</h3>
+        <p>
+          Grow your Instagram presence with professional
+          social media promotion solutions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📘 Facebook</h3>
+        <p>
+          Improve your Facebook reach and build a stronger
+          online presence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>▶️ YouTube</h3>
+        <p>
+          Promote your YouTube channel and increase your
+          content visibility.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎵 TikTok</h3>
+        <p>
+          Get your content in front of more people and
+          increase your social reach.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRICING -->
+  <section id="pricing">
+
+    <div class="section-title">
+      <h2>Simple Pricing</h2>
+      <p>Choose a package that fits your needs.</p>
+    </div>
+
+    <div class="pricing">
+
+      <div class="price-card">
+
+        <h3>Starter</h3>
+
+        <div class="price">
+          ₹99
+        </div>
+
+        <ul>
+          <li>Social Media Service</li>
+          <li>Fast Processing</li>
+          <li>Basic Support</li>
+        </ul>
+
+        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
+          Order Now
+        </a>
+
+      </div>
+
+
+      <div class="price-card featured">
+
+        <h3>Popular</h3>
+
+        <div class="price">
+          ₹299
+        </div>
+
+        <ul>
+          <li>Premium Service</li>
+          <li>Fast Processing</li>
+          <li>Priority Support</li>
+        </ul>
+
+        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
+          Order Now
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Business</h3>
+
+        <div class="price">
+          ₹599
+        </div>
+
+        <ul>
+          <li>Advanced Service</li>
+          <li>Priority Processing</li>
+          <li>Premium Support</li>
+        </ul>
+
+        <a href="https://wa.me/916282942681" class="btn primary" target="_blank">
+          Order Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY US -->
+  <section>
+
+    <div class="section-title">
+      <h2>Why Cyber Nyza?</h2>
+      <p>Built for creators, brands and businesses.</p>
+    </div>
+
+    <div class="why">
+
+      <div class="why-box">
+        <h3>⚡ Fast</h3>
+        <p>Quick service processing.</p>
+      </div>
+
+      <div class="why-box">
+        <h3>🔐 Secure</h3>
+        <p>Your information stays protected.</p>
+      </div>
+
+      <div class="why-box">
+        <h3>💎 Affordable</h3>
+        <p>Budget-friendly social media solutions.</p>
+      </div>
+
+      <div class="why-box">
+        <h3>💬 Support</h3>
+        <p>Friendly customer support.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <h2>Ready to Grow?</h2>
+
+    <p>
+      Contact Cyber Nyza Social Booster Kerala today.
+    </p>
+
+    <a
+      href="https://wa.me/916282942681"
+      class="btn primary"
+      target="_blank">
+      💬 WhatsApp Us
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    © 2026 Cyber Nyza Social Booster Kerala.
+    All Rights Reserved.
+
+  </footer>
+
+</body>
+</html>
